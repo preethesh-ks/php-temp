@@ -3,79 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+    <form action="index.php" method="post">
 
-    <form method="post" action="index.php">
+        <input type="checkbox" name="pizza" value="Pizza" />
+        Pizza <br>
+        <input type="checkbox" name="burger" value="Burger" />
+        Burger <br>
+        <input type="checkbox" name="taco" value="Taco" />
+        Taco <br>
+        <input type="checkbox" name="dosa" value="Dosa" />
+        Dosa <br>
+        <input type="checkbox" name="idli" value="Idly" />
+        Idly <br>
 
-        <input type="radio" name="credit" value="Visa">
-        Visa<br>
-        <input type="radio" name="credit" value="mastercard">
-        Matercard<br>
-        <input type="radio" name="credit" value="rupay">
-        Rupay<br>
-        <input type="submit" value="confirm" name="confirm">
+        <input type="submit" name="submit" />
 
     </form>
 </body>
 
 </html>
+
 <?php
-//name should be saame in inputtag to specfy thyarein same group
-
-// if (isset($_POST["confirm"])) {
-
-//     if (isset($_POST["credit"])) {
-//         $credit_card = $_POST["credit"]; ///get credit value n form
-//         echo $credit_card;
-//     } else {
-//         echo "please make selecton";
-//     }
-// }
 
 
 
-// if (isset($_POST["confirm"])) {
-//     $credit_card = null;
-//     if (isset($_POST["credit"])) {
-//         $credit_card = $_POST["credit"]; ///get credit value n form
-//     }
-
-//     if ($credit_card == "Visa") {
-//         echo "you selected visa";
-//     } elseif ($credit_card == "mastercard") {
-//         echo "you selected mastercard";
-//     } elseif ($credit_card == "rupay") {
-//         echo "you selected Rupay card";
-//     } else {
-//         echo "you selected no cards";
-//     }
-// }
-
-
-if (isset($_POST["confirm"])) {
-    $credit_card = null;
-    if (isset($_POST["credit"])) {
-        $credit_card = $_POST["credit"]; ///get credit value n form
-    }
-    switch ($credit_card) {
-        case "Visa":
-            echo "you selected visa";
-            break;
-        case "mastercard":
-            echo "you selected mastercard";
-            break;
-        case "rupay":
-            echo "you selected rupay  card";
-            break;
-        default:
-            echo "you selected  no cards";
-    }
+if (isset($_POST["submit"])) {
+    echo "you like pizza";
 }
-
-
-
-?>
